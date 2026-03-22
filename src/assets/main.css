@@ -1,0 +1,36 @@
+@import "./base.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/Inter/static/Inter_18pt-Regular.ttf);
+  }
+  @font-face {
+    font-family: "Exo";
+    font-style: normal;
+    src: local('Exo-Regular'), url(./Exo/static/Exo-Regular.ttf);
+  }
+  @font-face {
+    font-family: "Inter-bold";
+    src: local('Inter-bold'), url(./Inter/static/Inter_18pt-Bold.ttf);
+  }
+  @font-face {
+    font-family: "Inter";
+    src: local('Inter'), url(./Inter/static/Inter_18pt-Regular.ttf);
+  }
+  @font-face {
+    font-family: "Inter-light";
+    src: local('Inter-light'), url(./Inter/static/Inter_18pt-Light.ttf);
+  }
+  @font-face {
+    font-family: "Inter-thin";
+    src: local('Inter-thin'), url(./Inter/static/Inter_18pt-Thin.ttf);
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "m-jabir"
+  },
+  "targets": {
+    "m-jabir": {
+      "hosting": {
+        "m-jabir": [
+          "jabirs",
+          "jabirs.web.app"
+        ]
+      }
+    }
+  },
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}
