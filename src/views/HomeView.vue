@@ -64,8 +64,8 @@
       <div class="lg:flex lg:gap-4 lg:justify-between min-h-screen">
         <div class="about flex flex-col gap-3 lg:sticky lg:w-1/2 lg:py-24 pt-10 sm:pt-16 lg:top-0 lg:max-h-screen lg:justify-between">
           <div class="flex flex-col gap-3">
-            <h1 class="text-4xl sm:text-5xl font-Inter-bold">Haseeb Kottakulam</h1>
-            <!-- <h3 class="text-xl font-Inter">Developer</h3> -->
+            <h1 class="text-4xl sm:text-5xl font-Inter-bold">Muhammed Jabir</h1>
+            <h3 class="text-xl font-Inter">Developer</h3>
             <p class="font-Inter text-slate-400">
               Building robust web solutions <br />
               with precision and flair.
@@ -108,8 +108,8 @@
           <section class="text-slate-400 mb-24 lg:mb-32">
             <p class="mb-4">I'm a passionate Full-Stack Web Developer with a background in creating dynamic and scalable web applications. With experience in front-end frameworks like <a href="https://vuejs.org/" target="_blank">Vue</a> and <a href="https://nuxt.com/" target="_blank">Nuxt</a>, and back-end technologies like <a href="https://laravel.com/" target="_blank">Laravel</a> and <a href="https://firebase.google.com/" target="_blank">Firebase</a> , I enjoy turning complex problems into efficient solutions. I thrive in collaborative environments and have a strong focus on delivering high-quality, user-centric products.</p>
             <p class="mb-4">
-              Throughout my career, I have had the opportunity to work on a variety of projects, from developing responsive e-commerce platforms to creating engaging and visually appealing websites. My experience with <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a>, <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>, <a href="https://www.php.net/" target="_blank">PHP</a> and <a href="https://tailwindcss.com/" target="_blank">TailwindCSS</a>, enables me to deliver high-performance web solutions that prioritize both aesthetics and functionality. I believe in the importance of a mobile-first design approach, ensuring every project I work on performs
-              optimally across all devices.
+              Throughout my career, I have had the opportunity to work on a variety of projects, from developing responsive e-commerce platforms to creating engaging and visually appealing websites. My experience with <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a>, <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>, <a href="https://www.php.net/" target="_blank">PHP</a> and <a href="https://tailwindcss.com/" target="_blank">TailwindCSS</a>, enables me to deliver high-performance web solutions that prioritize both aesthetics and functionality. I believe
+              in the importance of a mobile-first design approach, ensuring every project I work on performs optimally across all devices.
             </p>
             <p class="mb-4">Outside of development, I enjoy reading and gaming, activities that help fuel my creativity and problem-solving skills. I am constantly seeking new challenges and opportunities to grow, both personally and professionally, and I am excited to bring my expertise and enthusiasm for web development to forward-thinking projects.</p>
           </section>
@@ -118,20 +118,49 @@
           <section class="mb-24 lg:mb-32">
             <ol>
               <li class="mb-12">
+                <a href="https://kbcinc.cloud/" target="_blank" class="grid gap-4 sm:grid-cols-8 group relative">
+                  <div class="absolute -inset-x-4 -inset-y-4 -z-50 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
+                  <header class="tracking-wide sm:col-span-2 text-slate-400 text-xs">
+                    JAN 2025 — <br />
+                    NOW
+                  </header>
+                  <div class="sm:col-span-6">
+                    <h5 class="text-white font-Inter-bold text-lg group-hover:text-emerald-300 transition">Vue Developer · Knowledge Bridge Consulting Inc.</h5>
+                    <p class="font-Inter-light text-slate-400 mt-2">
+                      During my time at KBC, I developed and maintained scalable web applications using Vue.js 2 & 3 and Nuxt.js, delivering both server-side rendered and single-page application experiences. I built responsive, accessible UI components with Vuetify to ensure a consistent look and feel across multiple product modules. Working closely with the API and backend teams, I integrated RESTful APIs into the frontend, handling data fetching, error states, and dynamic data presentation connected to database-driven endpoints. I also managed application state and routing using Pinia and Vue Router across complex multi-page flows, and actively contributed to agile ceremonies including sprint planning, code reviews, and cross-team technical discussions.
+                    </p>
+                    <ul class="mt-4 text-sm flex flex-wrap gap-2">
+                      <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Vue</li>
+                      <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">JavaScript</li>
+                      <!-- <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">TypeScript</li> -->
+                      <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Nuxt</li>
+                      <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Vuetify</li>
+                      <!-- <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Laravel</li> -->
+                      <!-- <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">PHP</li> -->
+                      <!-- <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">Flutter</li> -->
+                    </ul>
+                  </div>
+                </a>
+              </li>
+
+              <li class="mb-12">
                 <a href="https://logicwheel.com/" target="_blank" class="grid gap-4 sm:grid-cols-8 group relative">
                   <div class="absolute -inset-x-4 -inset-y-4 -z-50 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-                  <header class="tracking-wide sm:col-span-2 text-slate-400 text-xs">2022 — PRESENT</header>
+                  <header class="tracking-wide sm:col-span-2 text-slate-400 text-xs">
+                    MAY 2022 — <br />
+                    JAN 2025
+                  </header>
                   <div class="sm:col-span-6">
                     <h5 class="text-white font-Inter-bold text-lg group-hover:text-emerald-300 transition">Full-Stack Developer · logicWheel</h5>
                     <p class="font-Inter-light text-slate-400 mt-2">At LogicWheel, I developed web applications by seamlessly integrating the frontend and backend. I worked on building intuitive, user-friendly interfaces while ensuring efficient communication between the client-side and server-side, resulting in high-performance, scalable web solutions.</p>
                     <ul class="mt-4 text-sm flex flex-wrap gap-2">
-                      <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">JavaScript</li>
-                      <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">TypeScript</li>
                       <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Vue</li>
                       <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Nuxt</li>
+                      <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">JavaScript</li>
+                      <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">TypeScript</li>
                       <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Laravel</li>
                       <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">PHP</li>
-                      <!-- <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">Flutter</li> -->
+                      <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Flutter</li>
                       <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">TailwindCSS</li>
                     </ul>
                   </div>
@@ -141,7 +170,10 @@
               <li class="mb-12">
                 <a href="https://www.silverhost.in/" target="_blank" class="grid gap-4 sm:grid-cols-8 group relative">
                   <div class="absolute -inset-x-4 -inset-y-4 -z-50 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-                  <header class="tracking-wide sm:col-span-2 text-slate-400 text-xs">2021 — 2022</header>
+                  <header class="tracking-wide sm:col-span-2 text-slate-400 text-xs">
+                    OCT 2021 — <br />
+                    FEB 2022
+                  </header>
                   <div class="sm:col-span-6">
                     <h5 class="text-white font-Inter-bold text-lg group-hover:text-emerald-300 transition">Front-End Developer · Silverhost</h5>
                     <p class="font-Inter-light text-slate-400 mt-2">As a front-end developer at Silverhost, I specialized in creating beautiful and interactive websites using HTML, CSS, JavaScript, jQuery, and Bootstrap. I focused on delivering responsive, mobile-first designs that enhance user experience across all devices, while maintaining efficient performance and compatibility across different browsers.</p>
