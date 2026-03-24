@@ -67,9 +67,15 @@
             <h1 class="text-4xl sm:text-5xl font-Inter-bold">Muhammed Jabir</h1>
             <h3 class="text-xl font-Inter">Developer</h3>
             <p class="font-Inter text-slate-400">
-              Building robust web solutions <br />
-              with precision and flair.
+              Passionate about writing clean code <br />
+              that solves real-world problems and powers business growth.
+              <!-- Building robust web solutions <br />
+              with precision and flair. -->
             </p>
+
+            <button class="text-left capitalize font-medium flex gap-4 items-center mt-10"><span class="border w-8 block h-0"></span> About</button>
+            <button class="text-left capitalize font-medium flex gap-4 items-center"><span class="border w-8 block h-0"></span> Experience</button>
+            <button class="text-left capitalize font-medium flex gap-4 items-center"><span class="border w-8 block h-0"></span> Projects</button>
 
             <div class="grid-cols-3 w-max gap-x-12 gap-y-16 my-16 hidden">
               <Vue class="w-20 h-20" />
