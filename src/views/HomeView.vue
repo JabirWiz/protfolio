@@ -191,7 +191,8 @@
             </ol>
           </section>
 
-          <h4 class="font-Inter-bold text-xl text-white sticky top-0 lg:static py-4 bg-slate-900/50 backdrop-blur-sm lg:bg-transparent lg:backdrop-blur-none z-20 mb-2">Projects</h4>
+          <h4 class="font-Inter-bold text-xl text-white sticky top-0 lg:static py-4 bg-slate-900/50 backdrop-blur-sm lg:bg-transparent lg:backdrop-blur-none z-20">Projects</h4>
+          <p class="font-Inter-light text-slate-400 mb-14">Throughout my career, I have successfully delivered a variety of complex solutions. While much of my recent work involves proprietary internal platforms for private stakeholders, the following projects serve as a representative sample of my technical capabilities and architectural approach</p>
           <section class="mb-24 lg:mb-32">
             <ol>
               <li class="mb-12">
