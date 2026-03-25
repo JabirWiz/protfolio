@@ -24,7 +24,7 @@
 
   const circleGrndt = useTemplateRef("circle-grdnt");
   const target = ref(null);
-  const section = ref("about");
+  const section = ref("about-sec");
   const body = document.getElementsByTagName("body")[0];
 
   console.log(body);
@@ -42,9 +42,9 @@
     circleGrndt.value.style.background = `radial-gradient(600px at ${mouse.x}px ${mouse.y - window.scrollY}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
   });
 
-  watch(isScrolling, () => {
-    if (!isScrolling.value && circleGrndt.value && window.innerWidth >= 1024) circleGrndt.value.style.background = `radial-gradient(600px at ${mouse.x}px ${mouse.y - window.scrollY}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
-  });
+  // watch(isScrolling, () => {
+  //   if (!isScrolling.value && circleGrndt.value && window.innerWidth >= 1024) circleGrndt.value.style.background = `radial-gradient(600px at ${mouse.x}px ${mouse.y - window.scrollY}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
+  // });
 
   useResizeObserver(body, (entries) => {
     const entry = entries[0];
@@ -69,11 +69,9 @@
           if (entry.isIntersecting) {
             console.log("entry", entry.target.id);
             section.value = entry.target.id;
-
-            console.log("The div is now visible!");
-            // You can trigger your scroll-based variable change here
+            // console.log("The div is now visible!");
           } else {
-            console.log("The div is hidden.");
+            // console.log("The div is hidden.");
           }
         });
       },
@@ -83,12 +81,14 @@
     observer.observe(projects);
     observer.observe(experience);
     observer.observe(about);
+
+    section.value = 'about-sec'
   });
 </script>
 
 <template>
   <div class="relative">
-    <div class="pointer-events-none fixed inset-0 z-30 transition duration-300 h-lvh" ref="circle-grdnt" style="background: radial-gradient(600px at 100px 100px, rgba(29, 78, 216, 0.15), transparent 80%)"></div>
+    <div class="pointer-events-none fixed inset-0 z-30 transition-all duration-300 h-lvh" ref="circle-grdnt" style="background: radial-gradient(600px at 100px 100px, rgba(29, 78, 216, 0.15), transparent 80%)"></div>
     <div class="container max-w-screen-xl mx-auto px-6 md:px-12 xl:px-24 text-white">
       <div class="lg:flex lg:gap-4 lg:justify-between min-h-screen">
         <div class="about flex flex-col gap-3 lg:sticky lg:w-1/2 lg:py-24 pt-10 sm:pt-16 lg:top-0 lg:max-h-screen lg:justify-between">
@@ -102,18 +102,18 @@
               with precision and flair. -->
             </p>
 
-            <div class="hidden lg:flex gap-4 flex-col">
+            <div class="hidden lg:flex gap-4 flex-col mt-10">
               <!-- {{ section }} -->
-              <a href="#about" :class="{ 'opacity-50': section != 'about-sec' }" class="text-left uppercase font-medium text-sm flex gap-4 items-center mt-10">
-                <span :class="{ 'w-14 ': section == 'about-sec', 'w-8': section != 'about-sec' }" class="border block h-0 border-slate-400 transition-all"></span>
+              <a href="#about" :class="{ 'opacity-40': section != 'about-sec' }" class="text-left uppercase font-medium text-sm flex gap-4 items-center w-max hover:opacity-100">
+                <span :class="{ 'w-14 ': section == 'about-sec', 'w-8': section != 'about-sec' }" class="border block h-0 border-slate-400 transition-all rounded-full"></span>
                 About
               </a>
-              <a href="#experience" :class="{ 'opacity-50': section != 'experience-sec' }" class="text-left uppercase font-medium text-sm flex gap-4 items-center">
-                <span :class="{ 'w-14': section == 'experience-sec', 'w-8': section != 'experience-sec' }" class="border block h-0 border-slate-400 transition-all"></span>
+              <a href="#experience" :class="{ 'opacity-40': section != 'experience-sec' }" class="text-left uppercase font-medium text-sm flex gap-4 items-center w-max hover:opacity-100">
+                <span :class="{ 'w-14': section == 'experience-sec', 'w-8': section != 'experience-sec' }" class="border block h-0 border-slate-400 transition-all rounded-full"></span>
                 Experience
               </a>
-              <a href="#projects" :class="{ 'opacity-50': section != 'projects-sec' }" class="text-left uppercase font-medium text-sm flex gap-4 items-center">
-                <span :class="{ 'w-14': section == 'projects-sec', 'w-8': section != 'projects-sec' }" class="border block h-0 border-slate-400 transition-all"></span>
+              <a href="#projects" :class="{ 'opacity-40': section != 'projects-sec' }" class="text-left uppercase font-medium text-sm flex gap-4 items-center w-max hover:opacity-100">
+                <span :class="{ 'w-14': section == 'projects-sec', 'w-8': section != 'projects-sec' }" class="border block h-0 border-slate-400 transition-all rounded-full"></span>
                 Projects
               </a>
             </div>
@@ -136,16 +136,16 @@
 
           <ol class="flex gap-5 mt-5">
             <li>
-              <a href="https://github.com/JabirWiz" target="_blank"><Github class="w-6 h-6 text-slate-400 hover:text-white transition" /></a>
+              <a href="https://github.com/JabirWiz" target="_blank"><Github class="w-6 h-6 text-slate-400 hover:text-emerald-300 transition" /></a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/muhammed-jabir-59507b203" target="_blank"><Linkedin class="w-6 h-6 text-slate-400 hover:text-white transition" /></a>
+              <a href="https://www.linkedin.com/in/muhammed-jabir-59507b203" target="_blank"><Linkedin class="w-6 h-6 text-slate-400 hover:text-emerald-300 transition" /></a>
             </li>
             <li>
-              <a href="https://www.instagram.com/jabir.wiz/" target="_blank"><Instagram class="w-6 h-6 text-slate-400 hover:text-white transition" /></a>
+              <a href="https://www.instagram.com/jabir.wiz/" target="_blank"><Instagram class="w-6 h-6 text-slate-400 hover:text-emerald-300 transition" /></a>
             </li>
             <li>
-              <a href="https://stackoverflow.com/users/19459062/jabir" target="_blank"><StackOverflow class="w-6 h-6 text-slate-400 hover:text-white transition" /></a>
+              <a href="https://stackoverflow.com/users/19459062/jabir" target="_blank"><StackOverflow class="w-6 h-6 text-slate-400 hover:text-emerald-300 transition" /></a>
             </li>
           </ol>
         </div>
@@ -155,7 +155,7 @@
           <section id="about-sec" class="text-slate-400 mb-24 lg:mb-32">
             <p class="mb-4">I'm a passionate Full-Stack Web Developer with a background in creating dynamic and scalable web applications. With experience in front-end frameworks like <a href="https://vuejs.org/" target="_blank">Vue</a> and <a href="https://nuxt.com/" target="_blank">Nuxt</a>, and back-end technologies like <a href="https://laravel.com/" target="_blank">Laravel</a> and <a href="https://firebase.google.com/" target="_blank">Firebase</a> , I enjoy turning complex problems into efficient solutions. I thrive in collaborative environments and have a strong focus on delivering high-quality, user-centric products.</p>
             <p class="mb-4">
-              Throughout my career, I have had the opportunity to work on a variety of projects, from developing responsive e-commerce platforms to creating engaging and visually appealing websites. My experience with <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a>, <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>, <a href="https://www.php.net/" target="_blank">PHP</a> and <a href="https://tailwindcss.com/" target="_blank">TailwindCSS</a>, enables me to deliver high-performance web solutions that prioritize both aesthetics and functionality. I believe
+              Throughout my career, I have had the opportunity to work on a variety of projects, from developing responsive e-commerce platforms to creating engaging and visually appealing websites. My experience with <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a>, <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>, <a href="https://www.php.net/" target="_blank">PHP</a> and <a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a>, enables me to deliver high-performance web solutions that prioritize both aesthetics and functionality. I believe
               in the importance of a mobile-first design approach, ensuring every project I work on performs optimally across all devices.
             </p>
             <p class="mb-4">Outside of development, I enjoy reading and gaming, activities that help fuel my creativity and problem-solving skills. I am constantly seeking new challenges and opportunities to grow, both personally and professionally, and I am excited to bring my expertise and enthusiasm for web development to forward-thinking projects.</p>
@@ -168,8 +168,9 @@
                 <a href="https://kbcinc.cloud/" target="_blank" class="grid gap-4 sm:grid-cols-8 group relative">
                   <div class="absolute -inset-x-4 -inset-y-4 -z-50 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
                   <header class="tracking-wide sm:col-span-2 text-slate-400 text-xs">
-                    JAN 2025 — <br />
-                    NOW
+                    <!-- JAN 2025 — <br />
+                    NOW -->
+                    2025 — NOW
                   </header>
                   <div class="sm:col-span-6">
                     <h5 class="text-white font-Inter-bold text-lg group-hover:text-emerald-300 transition">Vue Developer · Knowledge Bridge Consulting Inc.</h5>
@@ -182,7 +183,7 @@
                       <!-- <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">TypeScript</li> -->
                       <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Nuxt</li>
                       <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Vuetify</li>
-                      <!-- <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Laravel</li> -->
+                      <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Bootstrap</li>
                       <!-- <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">PHP</li> -->
                       <!-- <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">Flutter</li> -->
                     </ul>
@@ -194,8 +195,9 @@
                 <a href="https://logicwheel.com/" target="_blank" class="grid gap-4 sm:grid-cols-8 group relative">
                   <div class="absolute -inset-x-4 -inset-y-4 -z-50 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
                   <header class="tracking-wide sm:col-span-2 text-slate-400 text-xs">
-                    MAY 2022 — <br />
-                    JAN 2025
+                    <!-- MAY 2022 — <br />
+                    JAN 2025 -->
+                    2022 — 2025
                   </header>
                   <div class="sm:col-span-6">
                     <h5 class="text-white font-Inter-bold text-lg group-hover:text-emerald-300 transition">Full-Stack Developer · logicWheel</h5>
@@ -203,12 +205,16 @@
                     <ul class="mt-4 text-sm flex flex-wrap gap-2">
                       <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Vue</li>
                       <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Nuxt</li>
-                      <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">JavaScript</li>
+                      <!-- <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">JavaScript</li> -->
                       <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">TypeScript</li>
                       <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Laravel</li>
-                      <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">PHP</li>
-                      <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Flutter</li>
-                      <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">TailwindCSS</li>
+                      <!-- <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">PHP</li> -->
+                      <!-- <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Flutter</li> -->
+                      <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Tailwind CSS</li>
+                      <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Firebase</li>
+                      <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">GCP</li>
+                      <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Node JS</li>
+                      <li class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">Express JS</li>
                     </ul>
                   </div>
                 </a>
@@ -218,8 +224,9 @@
                 <a href="https://www.silverhost.in/" target="_blank" class="grid gap-4 sm:grid-cols-8 group relative">
                   <div class="absolute -inset-x-4 -inset-y-4 -z-50 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
                   <header class="tracking-wide sm:col-span-2 text-slate-400 text-xs">
-                    OCT 2021 — <br />
-                    FEB 2022
+                    <!-- OCT 2021 — <br />
+                    FEB 2022 -->
+                    2021 — 2022
                   </header>
                   <div class="sm:col-span-6">
                     <h5 class="text-white font-Inter-bold text-lg group-hover:text-emerald-300 transition">Front-End Developer · Silverhost</h5>
@@ -272,7 +279,7 @@
             </ol>
           </section>
 
-          <p class="font-Inter-light text-slate-400">Inspired by <a href="https://brittanychiang.com/" target="_blank" class="text-white">Brittany Chiang</a>'s portfolio, Developed using <a href="https://vuejs.org/" target="_blank">Vue.js</a> and <a href="https://tailwindcss.com/" target="_blank">TailwindCSS</a> for a responsive and modular design, and deployed on <a href="https://firebase.google.com/" target="_blank">Firebase</a>.</p>
+          <p class="font-Inter-light text-slate-400">Inspired by <a href="https://brittanychiang.com/" target="_blank" class="text-white">Brittany Chiang</a>'s portfolio, Developed using <a href="https://vuejs.org/" target="_blank">Vue.js</a> and <a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a> for a responsive and modular design, and deployed on <a href="https://firebase.google.com/" target="_blank">Firebase</a>.</p>
         </div>
       </div>
     </div>
@@ -315,5 +322,19 @@
       transform: scale(2);
       opacity: 0;
     }
+  }
+
+
+  *::selection {
+    background: #6ee7b7;
+    color: #000000;
+  }
+  *::-moz-selection {
+    background: #6ee7b7;
+    color: #000000;
+  }
+  *::-webkit-selection {
+    background: #6ee7b7;
+    color: #000000;
   }
 </style>
