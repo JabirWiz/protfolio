@@ -94,7 +94,7 @@
               <li class="mb-12">
                 <a href="https://logicwheel.com/" target="_blank" class="grid gap-4 sm:grid-cols-8 group relative">
                   <div class="absolute -inset-x-4 -inset-y-4 -z-50 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-                  <header class="tracking-wide sm:col-span-2 text-slate-400 text-sm">2022 — PRESENT</header>
+                  <header class="tracking-wide sm:col-span-2 text-slate-400 text-sm">2022 — 2025</header>
                   <div class="sm:col-span-6">
                     <h5 class="text-white font-Inter-bold text-lg group-hover:text-emerald-300 transition">Full-Stack Developer · logicWheel</h5>
                     <p class="font-Inter-light text-slate-400 mt-2">At LogicWheel, I developed web applications by seamlessly integrating the frontend and backend. I worked on building intuitive, user-friendly interfaces while ensuring efficient communication between the client-side and server-side, resulting in high-performance, scalable web solutions.</p>
