@@ -61,7 +61,7 @@
     var traingleA = Bodies.polygon(xCenter + randomIntFromInterval(-300, 300), randomIntFromInterval(-100, -450), 3, 50);
     var traingleB = Bodies.polygon(xCenter + randomIntFromInterval(-300, 300), randomIntFromInterval(-100, -450), 3, 40);
 
-    var ground = Bodies.rectangle((offsets?.x ?? 0) + 192 ?? 432, (offsets?.y ?? 0) + 338 + (isMobile ? 42 : 0) ?? 475, innerDiv.value?.clientWidth ?? 210, innerDiv.value?.clientHeight ?? 100, {
+    var ground = Bodies.rectangle((offsets?.x ?? 0) + 192 || 432, (offsets?.y ?? 0) + 338 + (isMobile ? 42 : 0) || 475, innerDiv.value?.clientWidth || 210, innerDiv.value?.clientHeight || 100, {
       isStatic: true,
       render: { fillStyle: "red", visible: false },
       chamfer: { radius: 24 },
@@ -114,7 +114,7 @@
     const isMobile = detectMob();
 
     let offsets = innerDiv.value?.getBoundingClientRect();
-    var ground = Bodies.rectangle((offsets?.x ?? 0) + 192 ?? 432, (offsets?.y ?? 0) + 338 + (isMobile ? 42 : 0) ?? 475, innerDiv.value?.clientWidth ?? 210, innerDiv.value?.clientHeight ?? 100, {
+    var ground = Bodies.rectangle((offsets?.x || 0) + 192 || 432, (offsets?.y || 0) + 338 + (isMobile ? 42 : 0) || 475, innerDiv.value?.clientWidth || 210, innerDiv.value?.clientHeight || 100, {
       isStatic: true,
       render: { fillStyle: "red", visible: false },
       chamfer: { radius: 24 },
