@@ -3,18 +3,6 @@
   import { onMounted, reactive, ref, useTemplateRef, watch } from "vue";
 
   import { useScroll } from "@vueuse/core";
-  import Vue from "@/components/icons/vue.vue";
-  import Nuxt from "@/components/icons/nuxt.vue";
-  import Laravel from "@/components/icons/laravel.vue";
-  import Php from "@/components/icons/php.vue";
-  import Js from "@/components/icons/js.vue";
-  import Ts from "@/components/icons/ts.vue";
-  import React from "@/components/icons/react.vue";
-  import Flutter from "@/components/icons/flutter.vue";
-  import Sqlite from "@/components/icons/sqlite.vue";
-  import Mysql from "@/components/icons/mysql.vue";
-  import Firebase from "@/components/icons/firebase.vue";
-  import Tailwind from "@/components/icons/tailwind.vue";
   import Github from "@/components/icons/github.vue";
   import Linkedin from "@/components/icons/linkedin.vue";
   import Instagram from "@/components/icons/instagram.vue";
@@ -27,17 +15,12 @@
   const section = ref("about-sec");
   const body = document.getElementsByTagName("body")[0];
 
-  console.log(body);
+  // console.log(body);
 
   const { x, y, isOutside } = useMouseInElement(body);
   const mouse = reactive(useMouseInElement(body));
 
   watch(mouse, () => {
-    // console.log(window.scrollY);
-    // console.log(mouse.x);
-    // console.log(mouse.y);
-    // console.log(window.innerWidth);
-    // console.log(isScrolling.value);
     if (!circleGrndt.value || window.innerWidth < 1024 || isScrolling.value) return;
     circleGrndt.value.style.background = `radial-gradient(600px at ${mouse.x}px ${mouse.y - window.scrollY}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
   });
@@ -61,13 +44,13 @@
     const about: any = document.querySelector("#about-sec");
     const experience: any = document.querySelector("#experience-sec");
     const projects: any = document.querySelector("#projects-sec");
-    console.log("myDiv", about);
+    // console.log("myDiv", about);
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log("entry", entry.target.id);
+            // console.log("entry", entry.target.id);
             section.value = entry.target.id;
             // console.log("The div is now visible!");
           } else {
