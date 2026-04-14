@@ -15,8 +15,6 @@
   const section = ref("about-sec");
   const body = document.getElementsByTagName("body")[0];
 
-  // console.log(body);
-
   const { x, y, isOutside } = useMouseInElement(body);
   const mouse = reactive(useMouseInElement(body));
 
@@ -44,17 +42,12 @@
     const about: any = document.querySelector("#about-sec");
     const experience: any = document.querySelector("#experience-sec");
     const projects: any = document.querySelector("#projects-sec");
-    // console.log("myDiv", about);
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // console.log("entry", entry.target.id);
             section.value = entry.target.id;
-            // console.log("The div is now visible!");
-          } else {
-            // console.log("The div is hidden.");
           }
         });
       },
