@@ -94,7 +94,7 @@
               </a>
             </div>
 
-            <div class="grid-cols-3 w-max gap-x-12 gap-y-16 my-16 hidden">
+            <!-- <div class="grid-cols-3 w-max gap-x-12 gap-y-16 my-16 hidden">
               <Vue class="w-20 h-20" />
               <Nuxt class="w-20 h-20" />
               <Laravel class="w-20 h-20" />
@@ -107,7 +107,7 @@
               <Mysql class="w-20 h-20" />
               <Firebase class="w-20 h-20" />
               <Tailwind class="w-20 h-20" />
-            </div>
+            </div> -->
           </div>
 
           <ol class="flex gap-5 mt-5">
