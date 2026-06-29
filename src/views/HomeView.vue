@@ -72,10 +72,10 @@
             <h1 class="text-4xl sm:text-5xl font-Inter-bold">Muhammed Jabir</h1>
             <h3 class="text-xl font-Inter">Developer</h3>
             <p class="font-Inter text-slate-400">
-              Passionate about writing clean code <br />
-              that solves real-world problems and powers business growth.
-              <!-- Building robust web solutions <br />
-              with precision and flair. -->
+              <!-- Passionate about writing clean code <br />
+              that solves real-world problems and powers business growth. -->
+              Building robust web solutions <br />
+              with precision and flair.
             </p>
 
             <div class="hidden lg:flex gap-4 flex-col mt-10">
@@ -92,7 +92,7 @@
                 <span :class="{ 'w-14': section == 'projects-sec', 'w-8': section != 'projects-sec' }" class="border block h-0 border-slate-400 transition-all rounded-full"></span>
                 Projects
               </a>
-            </div>
+            </div> 
 
             <!-- <div class="grid-cols-3 w-max gap-x-12 gap-y-16 my-16 hidden">
               <Vue class="w-20 h-20" />
